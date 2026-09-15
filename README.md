@@ -2,86 +2,98 @@
 
 ## 📌 Problem Statement
 
-AllLife Bank aims to better understand its customers to improve marketing strategies and service delivery.
-This project segments customers based on their spending behavior and interaction patterns.
+AllLife Bank wants to better understand its existing credit card customers to improve personalized marketing and service delivery.
+
+This project uses unsupervised learning to identify distinct customer segments based on spending-related financial attributes and past interactions with the bank.
 
 ---
 
 ## ⚙️ Tech Stack
 
-* Python
-* Pandas, NumPy
-* Matplotlib, Seaborn
-* Scikit-learn
-* K-Means Clustering
-* Hierarchical Clustering
-* Elbow Method
-* Silhouette Score
-  
+- Python
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Scikit-learn
+- SciPy
+- K-Means Clustering
+- Hierarchical / Agglomerative Clustering
+
 ---
 
 ## 🔍 Approach
 
-* Data Cleaning & Preprocessing
-* Exploratory Data Analysis (EDA)
-* Feature scaling using StandardScaler
-* K-Means clustering:
-
-  * Elbow Method
-  * Silhouette Score
-* Hierarchical clustering:
-
-  * Dendrogram analysis
-* Cluster profiling & comparison
-
----
-
-## 📊 Results
-
-* Identified **3 distinct customer segments**
-* Achieved strong clustering performance (Silhouette score ~0.59) 
-* High agreement between K-Means and Hierarchical clustering (ARI ~0.99) 
+- Data loading and data overview
+- Exploratory Data Analysis (EDA)
+- Missing-value analysis
+- Outlier analysis
+- Feature scaling using StandardScaler
+- K-Means clustering
+- Elbow Method for cluster selection
+- Silhouette Score analysis
+- Silhouette visualization
+- Hierarchical / Agglomerative Clustering
+- Dendrogram analysis
+- Cluster profiling
+- Comparison of K-Means and Hierarchical Clustering
 
 ---
 
-## 💡 Customer Segments
+## 📊 Clustering Results
 
-### 🟢 Cluster 1 – Balanced Customers
+Both K-Means and Hierarchical Clustering produced well-defined customer segments.
 
-* Moderate credit limit & card usage
-* Prefer physical banking
-* Low digital activity
-
-### 🔵 Cluster 2 – Premium Digital Customers
-
-* High credit limit & multiple cards
-* High online usage
-* Low support dependency
-
-### 🔴 Cluster 3 – Low Value, High Support Customers
-
-* Low credit limit
-* Frequent support calls
-* Higher servicing cost
+- Silhouette Score: approximately **0.59** for both methods
+- Adjusted Rand Index (ARI): **0.9944**
+- The high ARI indicates near-perfect agreement between the two clustering approaches.
+- The resulting clusters were highly similar, with some cluster labels swapped between methods.
 
 ---
 
-## 💼 Business Impact
+## 👥 Customer Segment Profiles
 
-* Enables targeted marketing strategies
-* Improves customer experience
-* Reduces operational costs
-* Supports data-driven decision making
+### Cluster 1 – High-Value Digital Customers
+
+- Very high credit limit
+- Highest number of credit cards
+- Very high online usage
+- Low branch visits
+- Very low customer-service calls
+
+**Business opportunity:** Target these customers with premium products, personalized offers, and digital-first services.
+
+### Cluster 2 – Service-Focused Customers
+
+- Lowest credit limit
+- Fewest credit cards
+- Moderate online usage
+- Highest number of customer-service calls
+- Frequent interaction with support
+
+**Business opportunity:** Improve service experience and identify suitable opportunities for cross-selling and credit-card upgrades.
+
+---
+
+## 💡 Business Recommendations
+
+- Develop personalized marketing campaigns for different customer segments.
+- Offer premium products and services to high-value, digitally active customers.
+- Improve customer support for customers with frequent service interactions.
+- Identify suitable cross-selling and upselling opportunities.
+- Encourage greater adoption of digital banking channels.
+- Use cluster profiles to tailor products, communication, and service strategies.
 
 ---
 
 ## 📁 Project Files
 
-* `UL_project.ipynb` → Full analysis
-* `UL project.pdf` → Detailed report
+- `UL_project.ipynb` → Complete Python clustering workflow
+- `UL_project.pdf` → Detailed project report
 
 ---
 
-## 👤 Author
+## 🚀 Future Improvements
 
-Chitranjali O.K.
+- Test additional clustering algorithms such as DBSCAN and Gaussian Mixture Models.
+- Explore additional customer attributes for richer segmentation.
+- Develop automated customer-segment monitoring.
+- Build an interactive dashboard to visualize customer segments and business recommendations.
