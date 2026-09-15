@@ -15,7 +15,9 @@ This project segments customers based on their spending behavior and interaction
 * Scikit-learn
 * K-Means Clustering
 * Hierarchical Clustering
-
+* Elbow Method
+* Silhouette Score
+  
 ---
 
 ## 🔍 Approach
